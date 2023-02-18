@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'typography';
+@import 'inputs';
+@import 'animations';
+@import 'mixins';
+
+@import 'header';
+@import 'footer';
+
+// pages 
+@import 'pages/home.scss';
+
+body {
+  font-family: sans-serif;
+}

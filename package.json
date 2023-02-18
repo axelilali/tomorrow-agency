@@ -1,0 +1,24 @@
+{
+  "name": "Starter",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": "",
+  "author": "Axel Ilali",
+  "license": "MIT",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack --mode production",
+    "watch-js": "./node_modules/.bin/webpack -w --mode development",
+    "watch-css": "sass -w ./assets/sass/main.scss ./static/main.min.css --no-source-map -s compressed",
+    "watch":"./node_modules/.bin/webpack --mode production & ./node_modules/.bin/sass -w ./assets/sass/main.scss ./static/main.min.css --no-source-map -s compressed"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.19.3",
+    "sass": "^1.58.3",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.19.3",
+    "babel-loader": "^8.2.5"
+  }
+}

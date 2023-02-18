@@ -1,0 +1,55 @@
+Arguments: 
+  /usr/local/bin/node /Users/admin/.yarn/bin/yarn.js init
+
+PATH: 
+  /Users/admin/.yarn/bin:/Users/admin/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/admin/.yarn/bin:/Users/admin/.config/yarn/global/node_modules/.bin:/Users/admin/.fig/bin:/Users/admin/.local/bin:/Users/admin/Development/flutter/bin:/Users/admin/Library/Android/sdk/platform-tools:/Users/admin/Development/sonar-scanner/bin:/Users/admin/Development/flutter/bin:/Users/admin/Library/Android/sdk/platform-tools:/Users/admin/Development/sonar-scanner/bin:/Users/admin/Development/flutter/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.15.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/Users/admin/.yarn/lib/cli.js:137150:13)
+      at Interface.emit (node:events:527:28)
+      at Interface._ttyWrite (node:readline:1081:16)
+      at ReadStream.onkeypress (node:readline:288:10)
+      at ReadStream.emit (node:events:527:28)
+      at emitKeys (node:internal/readline/utils:358:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (node:internal/readline/emitKeypressEvents:61:36)
+      at ReadStream.emit (node:events:527:28)
+      at addChunk (node:internal/streams/readable:315:12)
+
+npm manifest: 
+  {
+    "name": "Starter",
+    "version": "1.0.0",
+    "main": "main.js",
+    "repository": "",
+    "author": "Me",
+    "license": "MIT",
+    "scripts": {
+      "build": "./node_modules/.bin/webpack --mode production"
+    },
+    "devDependencies": {
+      "@babel/preset-env": "^7.19.3",
+      "webpack": "^5.74.0",
+      "webpack-cli": "^4.10.0"
+    },
+    "dependencies": {
+      "@babel/core": "^7.19.3",
+      "babel-loader": "^8.2.5"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
