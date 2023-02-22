@@ -1,1 +1,14 @@
-body{font-family:sans-serif}body *{margin:0;padding:0}
+@font-face {
+  font-family: "MBF Alva";
+  src: local("MBF Alva Regular"), local("MBF-Alva-Regular"), url("./fonts/MBFAlva.woff2") format("woff2"), url("./fonts/MBFAlva.woff") format("woff"), url("./fonts/MBFAlva.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "MBF Alva";
+}
