@@ -9,7 +9,7 @@
     "watch-js": "./node_modules/.bin/webpack -w --mode development",
     "watch-css": "./node_modules/.bin/sass -w ./assets/sass/main.scss ./static/main.min.css --no-source-map -s compressed",
     "watch": "./node_modules/.bin/webpack -w --mode development & ./node_modules/.bin/sass -w ./assets/sass/main.scss ./static/main.min.css --no-source-map",
-    "compile": "./node_modules/.bin/webpack --mode production & ./node_modules/.bin/sass -w ./assets/sass/main.scss ./static/main.min.css --no-source-map -s compressed",
+    "compile": "./node_modules/.bin/webpack --mode production & ./node_modules/.bin/sass ./assets/sass/main.scss ./static/main.min.css --no-source-map -s compressed",
     "prepare": "husky install"
   },
   "devDependencies": {
