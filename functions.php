@@ -21,12 +21,13 @@ if (file_exists($composer_autoload)) {
 
 require_once get_template_directory() . '/utils/stylesheets.php';
 require_once get_template_directory() . '/utils/scripts.php';
+require_once get_template_directory() . '/utils/advance-custom-fields.php';
+
 /**
  * This ensures that Timber is loaded and available as a PHP class.
  * If not, it gives an error message to help direct developers on where to activate
  */
 if (!class_exists('Timber')) {
-
   add_action(
     'admin_notices',
     function () {
@@ -58,7 +59,7 @@ Timber::$autoescape = false;
  * We're going to configure our theme inside of a subclass of Timber\Site
  * You can move this to its own file and include here via php's include("MySite.php")
  */
-class StarterSite extends Timber\Site
+class mobilidee extends Timber\Site
 {
   /** Add timber support. */
   public function __construct()
@@ -73,12 +74,10 @@ class StarterSite extends Timber\Site
   /** This is where you can register custom post types. */
   public function register_post_types()
   {
-
   }
   /** This is where you can register custom taxonomies. */
   public function register_taxonomies()
   {
-
   }
 
   /** This is where you add some context
@@ -87,8 +86,9 @@ class StarterSite extends Timber\Site
    */
   public function add_to_context($context)
   {
-    $context['menu'] = new Timber\Menu();
-    $context['site'] = $this;
+    $context['site']  = $this;
+    $context['options']       = get_fields('options');
+
     return $context;
   }
 
@@ -147,11 +147,6 @@ class StarterSite extends Timber\Site
     add_theme_support('menus');
   }
 
-  /** This Would return 'foo bar!'.
-   *
-   * @param string $text being 'foo', then returned 'foo bar!'.
-   */
-
   /** This is where you can add your own functions to twig.
    *
    * @param string $twig get extension.
@@ -161,7 +156,6 @@ class StarterSite extends Timber\Site
     $twig->addExtension(new Twig\Extension\StringLoaderExtension());
     return $twig;
   }
-
 }
 
-new StarterSite();
+new mobilidee();

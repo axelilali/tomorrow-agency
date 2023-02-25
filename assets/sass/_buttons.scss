@@ -1,0 +1,36 @@
+button {
+  background: none;
+  border: none;
+}
+
+.button {
+  border-radius: .625rem;
+  padding: .9375rem 1.25rem;
+  transition: all ease .3s;
+
+
+  &.primary-btn {
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+
+    &:hover {
+      color: $blue;
+      border-color: $blue;
+    }
+  }
+
+  &.secondary-btn {
+    border: 1px solid $blue;
+    color: #fff;
+    background: $blue;
+
+    &:hover {
+      color: $blue;
+      border-color: $blue;
+      background: transparent;
+    }
+  }
+
+
+}

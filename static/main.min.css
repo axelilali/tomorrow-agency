@@ -1,1 +1,215 @@
-@font-face{font-family:"MBF Alva";src:local("MBF Alva Regular"),local("MBF-Alva-Regular"),url("./fonts/MBFAlva.woff2") format("woff2"),url("./fonts/MBFAlva.woff") format("woff"),url("./fonts/MBFAlva.ttf") format("truetype");font-weight:400;font-style:normal}h1,h2,h3,h4,h5,h6{font-family:"MBF Alva"}
+@font-face {
+  font-family: "MBF Alva";
+  src: local("MBF Alva Regular"), local("MBF-Alva-Regular"), url("./fonts/MBFAlva.woff2") format("woff2"), url("./fonts/MBFAlva.woff") format("woff"), url("./fonts/MBFAlva.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "MBF Alva";
+}
+
+a {
+  text-decoration: none;
+}
+
+.small-title {
+  letter-spacing: 0.08em;
+  font-size: 18px;
+  padding-left: 110px;
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  color: #00A0E0;
+  font-weight: 300;
+  margin-bottom: 0.625rem;
+}
+.small-title::before {
+  content: "";
+  height: 1px;
+  width: 100px;
+  background: #00A0E0;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.button {
+  border-radius: 0.625rem;
+  padding: 0.9375rem 1.25rem;
+  transition: all ease 0.3s;
+}
+.button.primary-btn {
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+.button.primary-btn:hover {
+  color: #00A0E0;
+  border-color: #00A0E0;
+}
+.button.secondary-btn {
+  border: 1px solid #00A0E0;
+  color: #fff;
+  background: #00A0E0;
+}
+.button.secondary-btn:hover {
+  color: #00A0E0;
+  border-color: #00A0E0;
+  background: transparent;
+}
+
+#header {
+  position: absolute;
+  width: calc(100VW - 150px);
+  top: 0;
+  padding-top: 3.125rem;
+  z-index: 2;
+}
+@media screen and (max-width: 1440px) {
+  #header {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+#header .logo {
+  max-width: 100%;
+}
+#header .navbar {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#header .navbar li {
+  list-style: none;
+}
+#header .navbar li a {
+  font-size: 0.875rem;
+  color: #fff;
+  transition: all ease 0.5s;
+  position: relative;
+}
+#header .navbar li a::after {
+  content: url("./images/triangle.png");
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 17px);
+  margin-top: 5px;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+#header .navbar li a:hover {
+  color: #00A0E0;
+}
+#header .navbar li a:hover::after {
+  opacity: 1;
+  margin-top: 0px;
+}
+
+#home-hero {
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  align-items: center;
+  padding-top: 6.25rem;
+  perspective: 100vw;
+  overflow: hidden;
+  background: #181818;
+}
+#home-hero .hero-background {
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: transform 1s ease-out;
+}
+#home-hero .container {
+  z-index: 2;
+}
+#home-hero h1 {
+  font-size: 4.6875rem;
+  color: #fff;
+}
+#home-hero h1 span {
+  color: #00A0E0;
+}
+#home-hero p {
+  color: #A9AFC3;
+}
+#home-hero .btn-container {
+  width: 350px;
+}
+#home-hero .btn-container .divider {
+  height: 1px;
+  background: #2A2E3D;
+  margin: 5px 0;
+}
+#home-hero .btn-container h5,
+#home-hero .btn-container p {
+  font-weight: 300;
+}
+#home-hero .btn-container h5 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding-bottom: 0.3125rem;
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+  letter-spacing: 0.08em;
+}
+#home-hero .btn-container p {
+  font-size: 1.125rem;
+  color: #00A0E0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+@media screen and (max-width: 1440px) {
+  section {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+#wrapper {
+  position: relative;
+  display: flex;
+}
+#wrapper .sidebar {
+  position: sticky;
+  top: 0;
+  width: 150px;
+  height: 100vh;
+  background: #080A12;
+}
+#wrapper .sidebar button {
+  display: block;
+  border: none;
+  background: none;
+  width: max-content;
+  margin: 70px auto 0 auto;
+}
+#wrapper .main-content {
+  width: calc(100VW - 150px);
+}
