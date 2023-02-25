@@ -1,7 +1,6 @@
 #home-hero {
   height: 100vh;
   position: relative;
-  // background: url('./images/hero-background.png') no-repeat;
   background-size: cover;
   background-position: right;
   display: flex;
@@ -49,6 +48,7 @@
       background: #2A2E3D;
       margin: 5px 0;
     }
+
     h5,
     p {
       font-weight: 300;
@@ -68,5 +68,67 @@
       color: $blue;
 
     }
+  }
+
+  .slick-dots {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 5;
+    width: max-content;
+
+    li {
+      display: block !important;
+      width: 15px !important;
+      height: 5px !important;
+      border-radius: 5px !important;
+      background: $grey-2;
+      margin-bottom: .9375rem;
+      transition: all ease .2s;
+      margin-left: auto !important;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      button {
+        visibility: hidden;
+      }
+
+      &.slick-active {
+        width: 30px !important;
+        background: $white;
+      }
+    }
+  }
+
+  .slider-controls {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+
+    button {
+      display: inline-block;
+      width: 80px;
+      border-bottom: 1px solid $grey;
+      padding-bottom: .75rem;
+      transition: $transition;
+      text-transform: uppercase;
+      color: $white;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 300;
+
+      &:hover {
+        color: $blue;
+        border-color: $blue;
+      }
+
+      &.next {
+        text-align: right;
+        margin-left: .625rem;
+      }
+    }
+
   }
 }

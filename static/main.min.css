@@ -5,12 +5,13 @@
   font-style: normal;
 }
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   font-family: "MBF Alva";
+}
+
+h4 {
+  font-size: 1.375rem;
+  font-weight: 300;
 }
 
 a {
@@ -20,7 +21,7 @@ a {
 .small-title {
   letter-spacing: 0.08em;
   font-size: 18px;
-  padding-left: 110px;
+  padding-left: 120px;
   position: relative;
   font-family: "Ubuntu", sans-serif;
   color: #00A0E0;
@@ -37,6 +38,14 @@ a {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.section-title {
+  font-size: 64px;
+}
+.section-title::after {
+  content: ".";
+  color: #00A0E0;
 }
 
 button {
@@ -178,6 +187,71 @@ button {
   font-size: 1.125rem;
   color: #00A0E0;
 }
+#home-hero .slick-dots {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 5;
+  width: max-content;
+}
+#home-hero .slick-dots li {
+  display: block !important;
+  width: 15px !important;
+  height: 5px !important;
+  border-radius: 5px !important;
+  background: #9DA4BD;
+  margin-bottom: 0.9375rem;
+  transition: all ease 0.2s;
+  margin-left: auto !important;
+}
+#home-hero .slick-dots li:hover {
+  cursor: pointer;
+}
+#home-hero .slick-dots li button {
+  visibility: hidden;
+}
+#home-hero .slick-dots li.slick-active {
+  width: 30px !important;
+  background: #fff;
+}
+#home-hero .slider-controls {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+#home-hero .slider-controls button {
+  display: inline-block;
+  width: 80px;
+  border-bottom: 1px solid #A9AFC3;
+  padding-bottom: 0.75rem;
+  transition: all ease 0.3s;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 300;
+}
+#home-hero .slider-controls button:hover {
+  color: #00A0E0;
+  border-color: #00A0E0;
+}
+#home-hero .slider-controls button.next {
+  text-align: right;
+  margin-left: 0.625rem;
+}
+
+#about {
+  padding-left: 0;
+}
+#about img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+#about .content {
+  padding: 6.25rem 3.125rem 6.25rem 4.6875rem;
+}
 
 body {
   padding: 0;
@@ -192,6 +266,41 @@ body {
   }
 }
 
+.scaling-container {
+  overflow: hidden;
+}
+
+.scaling-img {
+  transition: all ease 0.2s;
+  transform-origin: center;
+}
+
+#blob {
+  height: 200px;
+  position: absolute;
+  z-index: 2;
+  aspect-ratio: 1;
+  z-index: 500;
+  background: linear-gradient(to right, #00A0E0, #080A12);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  animation: rotate 20s infinite;
+  filter: blur(200px);
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  50% {
+    scale: 1 1.5;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
 #wrapper {
   position: relative;
   display: flex;
