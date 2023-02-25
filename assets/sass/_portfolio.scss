@@ -1,0 +1,40 @@
+#portfolio {
+  padding-top: 12.5rem;
+  padding-bottom: 12.5rem;
+
+  .portfolio-card {
+    position: relative;
+    transition: all ease .3s;
+
+    .content {
+      transition: all ease .3s;
+      position: absolute;
+      z-index: 2;
+      bottom: 3.125rem;
+      text-align: center;
+      opacity: 0;
+      text-align: center;
+      color: $white;
+      width: 100%;
+    }
+
+    img {
+      transition: all ease .3s;
+      max-width: 100%;
+      filter: grayscale(1);
+    }
+
+    &:hover {
+      transform: translateY(-20px);
+      cursor: pointer;
+
+      .content {
+        opacity: 1;
+      }
+
+      img {
+        filter: grayscale(0);
+      }
+    }
+  }
+}

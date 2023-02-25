@@ -1,0 +1,23 @@
+<section id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h3 class="small-title">PORTFOLIO</h3>
+        <h2 class="section-title">NOS DERNIERS JOBS<span>.</span></h2>
+        <p>Nous essayons toujours de mettre en œuvre nos idées créatives au plus haut niveau. Vous pouvez le constater en consultant notre portfolio.</p>
+      </div>
+    </div>
+
+    <div id="portfolio-card-container" class="d-flex mt-5">
+      {% for item in portfolio %}
+        <div class="portfolio-card">
+          <img src="{{Image(item.thumbnail).src}}" alt="" srcset="">
+          <div class="content">
+            <h5>{{item.title}}</h5>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

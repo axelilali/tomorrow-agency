@@ -1,4 +1,65 @@
 #services {
-  padding: 100px 0;
-  background: $black;
+  padding-top: 9.375rem;
+  padding-bottom: 9.375rem;
+  background: #111319;
+
+  h2 {
+    color: $white;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  p {
+    color: $grey-2;
+  }
+
+  .service-card {
+    text-align: center;
+    padding: 3.125rem;
+    flex:1;
+    background: linear-gradient(#191C26, rgba(0, 0, 0, 0));
+    transition: $transition;
+
+    &:nth-child(even){
+      background: linear-gradient(#080A12, rgba(0, 0, 0, 0));
+    }
+
+
+    .img-container {
+      transition: all ease .2s;
+      height: 130px;
+      width: 130px;
+      border-radius: 50%;
+      background: #23252E;
+      margin: 0 auto 2.1875rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    &:hover {
+      .img-container {
+        background: #1181AF;
+      }
+      background: linear-gradient($blue, rgba(0, 0, 0, 0));
+    }
+   
+    h4 {
+      font-size: 1.25rem;
+      color: $white;
+    }
+
+    a {
+      display: inline-block;
+      color: $blue;
+      border-bottom: 1px solid $blue;
+      text-transform: uppercase;
+      margin-top: 1.875rem;
+      margin-bottom: 3.125rem;
+      padding-bottom: .3125rem;
+    }
+  }
 }

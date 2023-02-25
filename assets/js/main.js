@@ -60,4 +60,17 @@ jQuery(function ($) {
     const scaleFactor = 1 + scrollTop / 20000 /* adjust the scaling factor as desired */
     img.style.transform = `scale(${scaleFactor})`
   })
+
+  ScrollReveal().reveal('section .small-title, section .section-title', {
+    origin: 'bottom',
+    distance: '20px',
+    delay: 200,
+    reset: false,
+    interval: 500,
+  })
+
+  ScrollReveal().reveal('.service-card', {
+    delay: 700,
+    interval: 300,
+  })
 })

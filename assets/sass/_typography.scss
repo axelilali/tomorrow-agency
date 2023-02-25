@@ -48,8 +48,7 @@ a {
 .section-title {
   font-size: 64px;
 
-  &::after {
-    content: '.';
+  span {
     color: $blue;
   }
 }
