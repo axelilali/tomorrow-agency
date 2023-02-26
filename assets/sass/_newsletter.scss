@@ -1,5 +1,65 @@
 #newsletter {
-  margin-top: 12.5rem;
-  margin-bottom: 12.5rem;
-  
+  padding: 0 !important;
+
+  .newsletter-container {
+    display: flex;
+     @media screen and (max-width:1192px) {
+      display: block;
+     }
+  }
+
+  h2 {
+    color: $white;
+  }
+
+  p {
+    color: $grey;
+
+    &.name {
+      font-size: 1.375rem;
+      color: $blue;
+    }
+
+    &.role {
+      font-size: 1rem;
+    }
+
+    &.quote {
+      font-size: 1.375rem;
+      margin: 3.125rem 0;
+      position: relative;
+      max-width: 420px;
+
+      &::after {
+        content: url('./images/quote.png');
+        position: absolute;
+        right: 0;
+        bottom: -6.25rem;
+      }
+    }
+  }
+  .box {
+    flex: 1;
+    padding: 12.5rem 3.125rem;
+  }
+
+  .newsletter {
+    background: #111319;
+  }
+
+  .note {
+    background: #000;
+  }
+
+  form {
+    input[type=email]{
+      border: none;
+      border-bottom: 1px solid $grey;
+      padding-bottom: .3125rem;
+      width: 70%;
+      background: none;
+      outline: none;
+      color: $white;
+    }
+  }
 }

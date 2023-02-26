@@ -2,6 +2,22 @@
   padding-top: 12.5rem;
   padding-bottom: 12.5rem;
 
+
+  #portfolio-card-container {
+    display: flex;
+
+    @media screen and (max-width:992px) {
+      display: block;
+
+      .portfolio-card {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   .portfolio-card {
     position: relative;
     transition: all ease .3s;

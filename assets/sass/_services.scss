@@ -3,6 +3,13 @@
   padding-bottom: 9.375rem;
   background: #111319;
 
+  .service-card-container {
+    display: flex;
+    @media screen and (max-width:1192px) {
+      display: block;
+    }
+  }
+
   h2 {
     color: $white;
 
@@ -18,11 +25,11 @@
   .service-card {
     text-align: center;
     padding: 3.125rem;
-    flex:1;
+    flex: 1;
     background: linear-gradient(#191C26, rgba(0, 0, 0, 0));
     transition: $transition;
 
-    &:nth-child(even){
+    &:nth-child(even) {
       background: linear-gradient(#080A12, rgba(0, 0, 0, 0));
     }
 
@@ -44,9 +51,10 @@
       .img-container {
         background: #1181AF;
       }
+
       background: linear-gradient($blue, rgba(0, 0, 0, 0));
     }
-   
+
     h4 {
       font-size: 1.25rem;
       color: $white;

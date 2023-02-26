@@ -9,6 +9,10 @@
     z-index: 2;
     margin-top: 12.5rem;
     margin-bottom: 12.5rem;
+
+    @media screen and (max-width:992px) {
+      margin: 0;
+    }
   }
 
   .scaling-container {
@@ -23,6 +27,7 @@
       object-fit: cover;
       height: 100%;
       width: 100%;
+      object-position: -6.25rem;
     }
   }
 

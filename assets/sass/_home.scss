@@ -30,6 +30,10 @@
     font-size: 4.6875rem;
     color: $white;
 
+    @media screen and (max-width:992px) {
+      font-size: 2.5rem;
+    }
+
     span {
       color: $blue;
     }
@@ -42,6 +46,10 @@
 
   .btn-container {
     width: 350px;
+
+    button {
+      margin-left: .625rem;
+    }
 
     .divider {
       height: 1px;

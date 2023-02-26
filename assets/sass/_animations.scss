@@ -1,0 +1,16 @@
+.pulsing {
+  box-shadow: 0 0 0 0 rgb(0, 160, 224, 0.5);
+  animation: pulse 3s infinite cubic-bezier(0.66, 0, 0, 1);
+  transition: transform ease .3s;
+
+  &:hover {
+    animation: none;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 15px rgb(0, 160, 224, 0);
+  }
+}

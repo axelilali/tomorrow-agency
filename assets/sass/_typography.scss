@@ -32,6 +32,10 @@ a {
   font-weight: 300;
   margin-bottom: .625rem;
 
+  @media screen and (max-width:768px) {
+    padding-left: 4.375rem;
+  }
+
   &::before {
     content: '';
     height: 1px;
@@ -42,6 +46,10 @@ a {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+
+    @media screen and (max-width:768px) {
+      width: 3.125rem;
+    }
   }
 }
 
@@ -50,5 +58,9 @@ a {
 
   span {
     color: $blue;
+  }
+
+  @media screen and (max-width:992px) {
+    font-size: 2.25rem;
   }
 }

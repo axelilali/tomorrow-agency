@@ -1,7 +1,19 @@
 button {
   background: none;
   border: none;
+
+  &.action {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: $blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
+
+
 
 .button {
   border-radius: .625rem;
