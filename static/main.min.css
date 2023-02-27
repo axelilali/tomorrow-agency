@@ -499,6 +499,7 @@ button.action {
 @media screen and (max-width: 768px) {
   #why-us .key-numbers .right {
     margin-top: 0;
+    margin-bottom: 3.125rem;
   }
 }
 #why-us .key-numbers .left .box {
@@ -515,18 +516,29 @@ button.action {
   color: #fff;
   font-size: 3rem;
   font-weight: bold;
+  padding-left: 0.9375rem;
+}
+@media screen and (max-width: 1500px) {
+  #why-us .key-numbers .box h3 {
+    font-size: 1.875rem;
+  }
 }
 #why-us .key-numbers .box h3 sup {
   color: #00A0E0;
   font-size: 1.5625rem;
   font-weight: normal;
   margin-top: -1.25rem;
-  top: -30px;
+  top: -20px;
   left: -5px;
 }
 #why-us .key-numbers .box p {
   font-size: 1.125rem;
   color: #A9AFC3;
+}
+@media screen and (max-width: 1500px) {
+  #why-us .key-numbers .box p {
+    font-size: 0.875rem;
+  }
 }
 #why-us h2 {
   color: #fff;
@@ -668,6 +680,32 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
+#cursor {
+  position: fixed;
+  opacity: 0;
+  z-index: 100;
+  height: 50px;
+  aspect-ratio: 1;
+  border: 1px solid #00A0E0;
+  border-radius: 50%;
+  translate: -50% -50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+#cursor .circle {
+  width: 10px;
+  aspect-ratio: 1;
+  background: #00A0E0;
+  border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
+  #cursor {
+    display: none;
+  }
+}
+
 section {
   position: relative;
 }
@@ -705,21 +743,6 @@ section .number {
 .scaling-img {
   transition: all ease 0.2s;
   transform-origin: center;
-}
-
-#blob {
-  height: 200px;
-  position: absolute;
-  z-index: 2;
-  aspect-ratio: 1;
-  z-index: 500;
-  background: linear-gradient(to right, #00A0E0, #080A12);
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  border-radius: 50%;
-  animation: rotate 20s infinite;
-  filter: blur(200px);
 }
 
 @keyframes rotate {

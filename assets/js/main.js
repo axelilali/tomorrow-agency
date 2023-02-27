@@ -1,20 +1,21 @@
 jQuery(function ($) {
   // blod animation
-  // const blob = document.getElementById('blob')
+  const cursor = document.getElementById('cursor')
 
-  // document.body.onpointermove = (event) => {
-  //   const { clientX, clientY } = event
-  //   blob.animate(
-  //     {
-  //       left: `${clientX}px`,
-  //       top: `${clientY}px`,
-  //     },
-  //     {
-  //       duration: 3000,
-  //       fill: 'forwards',
-  //     },
-  //   )
-  // }
+  document.addEventListener('mousemove', function (e) {
+    cursor.style.opacity = 1
+    const { clientX, clientY } = event
+    cursor.animate(
+      {
+        left: `${clientX}px`,
+        top: `${clientY}px`,
+      },
+      {
+        duration: 500,
+        fill: 'forwards',
+      },
+    )
+  })
   // hero animation
   const box = document.querySelector('.hero-background')
   box.addEventListener('mousemove', handleMouseMove)
@@ -62,9 +63,8 @@ jQuery(function ($) {
     images.forEach((image) => {
       console.log(image.getBoundingClientRect().top)
       // if(image.getBoundingClientRect().top < 500) {
-        image.style.transform = `scale(${scaleFactor})`
+      image.style.transform = `scale(${scaleFactor})`
       // }
-      
     })
   })
 
@@ -79,5 +79,12 @@ jQuery(function ($) {
   ScrollReveal().reveal('.service-card', {
     delay: 700,
     interval: 300,
+  })
+
+  ScrollReveal().reveal('#why-us .box', {
+    origin: 'bottom',
+    distance: '10px',
+    delay: 700,
+    interval: 200,
   })
 })
