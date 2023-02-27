@@ -71,7 +71,7 @@ jQuery(function ($) {
   ScrollReveal().reveal('section .small-title, section .section-title', {
     origin: 'bottom',
     distance: '20px',
-    delay: 200,
+    delay: 100,
     reset: false,
     interval: 500,
   })

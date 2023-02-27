@@ -306,7 +306,7 @@ button.action {
   }
 }
 #about .content {
-  padding: 6.25rem 3.125rem 6.25rem 4.6875rem;
+  padding: 12.5rem 3.125rem 6.25rem 4.6875rem;
 }
 @media screen and (max-width: 992px) {
   #about .content {
@@ -580,6 +580,9 @@ button.action {
   outline: none;
   color: #fff;
 }
+#newsletter form button {
+  margin-left: 1.875rem;
+}
 
 body {
   padding: 0;
@@ -587,6 +590,24 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
+section {
+  position: relative;
+}
+section .number {
+  font-size: 100px;
+  color: #A9AFC3;
+  opacity: 0.2;
+  position: absolute;
+  top: 3.125rem;
+  right: 3.125rem;
+  z-index: 100;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  section .number {
+    display: none;
+  }
+}
 @media screen and (max-width: 1440px) {
   section {
     padding-left: 70px;
