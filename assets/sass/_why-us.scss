@@ -3,6 +3,62 @@
   padding-top: 12.5rem;
   padding-bottom: 12.5rem;
 
+  .key-numbers {
+    display: flex;
+    gap: 1.25rem;
+
+    @media screen and (max-width:768px) {
+      display: block;
+    }
+
+    .left,
+    .right {
+      flex: 1;
+    }
+
+    .right {
+      margin-top: 1.875rem;
+
+      @media screen and (max-width:768px) {
+        margin-top: 0;
+      }
+    }
+
+    .left .box {
+      background: linear-gradient($blue, rgba(0, 0, 0, 0) 80%);
+    }
+
+    .right .box {
+      background: linear-gradient(rgba(0, 0, 0, 0) 20%, $blue);
+    }
+
+    .box {
+      text-align: center;
+      padding: 3.125rem 1.25rem;
+
+      h3 {
+        color: $white;
+        font-size: 3rem;
+        font-weight: bold;
+
+        sup {
+          color: $blue;
+          font-size: 1.5625rem;
+          font-weight: normal;
+          margin-top: -1.25rem;
+          top: -30px;
+          left: -5px;
+
+        }
+      }
+
+      p {
+        font-size: 1.125rem;
+        color: $grey;
+      }
+    }
+  }
+
   h2 {
     color: $white;
   }

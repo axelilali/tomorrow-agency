@@ -480,6 +480,54 @@ button.action {
   padding-top: 12.5rem;
   padding-bottom: 12.5rem;
 }
+#why-us .key-numbers {
+  display: flex;
+  gap: 1.25rem;
+}
+@media screen and (max-width: 768px) {
+  #why-us .key-numbers {
+    display: block;
+  }
+}
+#why-us .key-numbers .left,
+#why-us .key-numbers .right {
+  flex: 1;
+}
+#why-us .key-numbers .right {
+  margin-top: 1.875rem;
+}
+@media screen and (max-width: 768px) {
+  #why-us .key-numbers .right {
+    margin-top: 0;
+  }
+}
+#why-us .key-numbers .left .box {
+  background: linear-gradient(#00A0E0, rgba(0, 0, 0, 0) 80%);
+}
+#why-us .key-numbers .right .box {
+  background: linear-gradient(rgba(0, 0, 0, 0) 20%, #00A0E0);
+}
+#why-us .key-numbers .box {
+  text-align: center;
+  padding: 3.125rem 1.25rem;
+}
+#why-us .key-numbers .box h3 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+#why-us .key-numbers .box h3 sup {
+  color: #00A0E0;
+  font-size: 1.5625rem;
+  font-weight: normal;
+  margin-top: -1.25rem;
+  top: -30px;
+  left: -5px;
+}
+#why-us .key-numbers .box p {
+  font-size: 1.125rem;
+  color: #A9AFC3;
+}
 #why-us h2 {
   color: #fff;
 }
