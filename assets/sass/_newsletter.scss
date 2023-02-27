@@ -41,6 +41,10 @@
   .box {
     flex: 1;
     padding: 12.5rem 3.125rem;
+
+    @media screen and (max-width:768px) {
+      padding: 3.125rem 1.25rem;
+    }
   }
 
   .newsletter {

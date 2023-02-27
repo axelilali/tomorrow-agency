@@ -1,0 +1,20 @@
+#footer {
+  padding: 3.125rem;
+  border-top: 1px solid #3A3F50;
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(to right, rgba(17, 19, 25,1) 50%, rgba(0, 0, 0, 1) 50%);
+
+  @media screen and (max-width:992px) {
+    background: rgba(17, 19, 25,1) ;
+  }
+  // margin-top: -7.5rem;
+  h5 {
+    color: $blue;
+    font-size: 1rem;
+  }
+
+  p {
+    color: $grey;
+  }
+}

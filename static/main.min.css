@@ -170,6 +170,26 @@ button.action {
     display: none;
   }
 }
+#footer {
+  padding: 3.125rem;
+  border-top: 1px solid #3A3F50;
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(to right, rgb(17, 19, 25) 50%, rgb(0, 0, 0) 50%);
+}
+@media screen and (max-width: 992px) {
+  #footer {
+    background: rgb(17, 19, 25);
+  }
+}
+#footer h5 {
+  color: #00A0E0;
+  font-size: 1rem;
+}
+#footer p {
+  color: #A9AFC3;
+}
+
 #home-hero {
   height: 100vh;
   position: relative;
@@ -408,6 +428,11 @@ button.action {
   z-index: 1;
   width: 60%;
 }
+@media screen and (max-width: 768px) {
+  #solutions .scaling-container {
+    width: 50%;
+  }
+}
 #solutions .scaling-container img {
   object-fit: cover;
   height: 100%;
@@ -565,6 +590,11 @@ button.action {
   flex: 1;
   padding: 12.5rem 3.125rem;
 }
+@media screen and (max-width: 768px) {
+  #newsletter .box {
+    padding: 3.125rem 1.25rem;
+  }
+}
 #newsletter .newsletter {
   background: #111319;
 }
@@ -603,7 +633,7 @@ section .number {
   z-index: 100;
   font-weight: bold;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   section .number {
     display: none;
   }
