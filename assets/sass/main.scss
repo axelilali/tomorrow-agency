@@ -83,6 +83,34 @@ section {
     height: 100vh;
     background: $black;
 
+    .social {
+      width: 450px;
+      display: flex;
+      justify-content: space-between;
+      transform: rotate(-90deg);
+      position: absolute;
+      left: -155px;
+      top: 50%;
+      position: relative;
+
+      &::before {
+        content: '';
+        height: 1px;
+        width: 3.125rem;
+        background: $grey;
+        margin-top: .625rem;
+      }
+
+      a {
+        font-size: .875rem;
+        color: $grey;
+        transition: all ease .2s;
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+
     button {
       display: block;
       border: none;

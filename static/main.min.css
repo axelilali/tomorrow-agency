@@ -645,6 +645,31 @@ body {
   height: 100vh;
   background: #080A12;
 }
+#wrapper .sidebar .social {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  transform: rotate(-90deg);
+  position: absolute;
+  left: -155px;
+  top: 50%;
+  position: relative;
+}
+#wrapper .sidebar .social::before {
+  content: "";
+  height: 1px;
+  width: 3.125rem;
+  background: #A9AFC3;
+  margin-top: 0.625rem;
+}
+#wrapper .sidebar .social a {
+  font-size: 0.875rem;
+  color: #A9AFC3;
+  transition: all ease 0.2s;
+}
+#wrapper .sidebar .social a:hover {
+  color: #00A0E0;
+}
 #wrapper .sidebar button {
   display: block;
   border: none;
